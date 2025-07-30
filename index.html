@@ -577,21 +577,20 @@
 
         // Function to load a specific day's PDF
         function loadDay(dayNumber) {
-            const pdfViewer = document.getElementById('dailyReportPdfViewer');
-            // Update this base URL if your PDFs are hosted elsewhere
-            const baseUrl = 'https://raw.githubusercontent.com/themaverikk65/Training_102Report/main/'; 
-            pdfViewer.src = `${baseUrl}Day${dayNumber}.pdf`;
+    const pdfViewer = document.getElementById('dailyReportPdfViewer');
+    const baseUrl = 'https://raw.githubusercontent.com/themaverikk65/Training_102Report/main/';
+    pdfViewer.src = `https://docs.google.com/gview?url=${baseUrl}Day${dayNumber}.pdf&embedded=true`;
 
-            // Update active button styling
-            const buttons = document.querySelectorAll('.day-selection-bar button');
-            buttons.forEach((button, index) => {
-                if (index + 1 === dayNumber) {
-                    button.classList.add('active-day');
-                } else {
-                    button.classList.remove('active-day');
-                }
-            });
+    const buttons = document.querySelectorAll('.day-selection-bar button');
+    buttons.forEach((button, index) => {
+        if (index + 1 === dayNumber) {
+            button.classList.add('active-day');
+        } else {
+            button.classList.remove('active-day');
         }
+    });
+}
+
     </script>
 </body>
 </html>
