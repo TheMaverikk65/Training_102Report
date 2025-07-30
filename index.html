@@ -562,7 +562,7 @@
 
             // Generate day selection buttons and load Day 1 initially
             const daySelectionBar = document.getElementById('daySelectionBar');
-            const totalDays = 16; // Assuming 16 days for the report
+            const totalDays = 30; // Assuming 16 days for the report
             for (let i = 1; i <= totalDays; i++) {
                 const button = document.createElement('button');
                 button.textContent = `Day ${i}`;
@@ -579,8 +579,7 @@
         function loadDay(dayNumber) {
             const pdfViewer = document.getElementById('dailyReportPdfViewer');
             // Update this base URL if your PDFs are hosted elsewhere
-            const baseUrl = 'https://raw.githubusercontent.com/themaverikk65/Training_102Report/main/
-'; 
+            const baseUrl = 'https://raw.githubusercontent.com/themaverikk65/Training_102Report/main/'; 
             pdfViewer.src = `${baseUrl}Day${dayNumber}.pdf`;
 
             // Update active button styling
