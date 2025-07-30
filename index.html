@@ -565,7 +565,7 @@
             const totalDays = 30; // Assuming 16 days for the report
             for (let i = 1; i <= totalDays; i++) {
                 const button = document.createElement('button');
-                button.textContent = `Day ${i}`;
+                button.textContent = `Day${i}`;
                 button.onclick = () => loadDay(i);
                 daySelectionBar.appendChild(button);
             }
